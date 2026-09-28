@@ -36,7 +36,18 @@
 
             #endregion
 
+            #region (Q2) Inheritance
 
+            // (a) Shipment is the parent class.
+
+            // (b) ExpressShipment is the child class.
+
+            // (c) TrackingCode is inherited by ExpressShipment.
+
+            // (d) Inheritance avoids code duplication and allows us to reuse
+            //     common code from the parent class.
+
+            #endregion
 
             #endregion
 
