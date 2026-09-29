@@ -67,7 +67,7 @@ namespace C_OOP02.Classes
             }
         }
 
-        public decimal EstimatedCost
+        public virtual decimal EstimatedCost
         {
             get { return DeliveryFee + (Weight * 5); }
         }

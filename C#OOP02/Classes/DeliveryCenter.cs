@@ -5,13 +5,16 @@ namespace C_OOP02.Classes
     internal class DeliveryCenter
     {
         #region fields
-        Shipment[] shipments;
-        #endregion 
+        private Shipment?[] shipments;
+        #endregion
+
+        
 
         #region Constructor
         public DeliveryCenter()
         {
-            shipments = new Shipment[10];
+            shipments = new Shipment[20];
+           
         }
         #endregion 
 
@@ -21,10 +24,10 @@ namespace C_OOP02.Classes
         {
             get
             {
-                
-                  return index >= 0 && index < shipments.Length ? shipments[index] : default;
+                if(index >= 0 && index < shipments.Length)
+                  return shipments[index];
 
-
+                return default;
                
                
 
@@ -41,9 +44,11 @@ namespace C_OOP02.Classes
 
             get
             {
+                if (!string.IsNullOrWhiteSpace(index))
                 for (int i = 0; i < shipments.Length; i++)
                 {
-                    if (shipments[i] !=null && shipments[i].TrackingCode == index) return shipments[i];
+                     if(shipments[i] != null && shipments[i].TrackingCode == index)
+                     return shipments[i];
                 }
                 return default;
             }
@@ -75,6 +80,10 @@ namespace C_OOP02.Classes
 
             return false;
         }
+
+        
+
+
         #endregion
     }
 }
