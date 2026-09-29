@@ -5,7 +5,7 @@ using C_OOP02.Struct;
 namespace C_OOP02.Classes
 {
     /// <summary>
-    /// 
+    /// Represents an international shipment with a destination country and customs fee.
     /// </summary>
     internal class InternationalShipment:Shipment
     {

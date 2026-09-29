@@ -4,7 +4,7 @@
 namespace C_OOP02.Classes
 {
     /// <summary>
-    /// 
+    /// Represents a standard shipment.
     /// </summary>
     internal class StandardShipment:Shipment
     {

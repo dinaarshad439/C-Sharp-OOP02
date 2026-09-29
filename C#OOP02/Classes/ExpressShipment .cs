@@ -5,7 +5,7 @@ using C_OOP02.Struct;
 namespace C_OOP02.Classes
 {
     /// <summary>
-    /// 
+    /// Represents an express shipment with an additional extra fee.
     /// </summary>
     internal class ExpressShipment:Shipment
     {
@@ -31,6 +31,7 @@ namespace C_OOP02.Classes
             : base(_trackingCode, _description, _weight, _deliveryFee, _destination)
         {
             ExtraFee = _extraFee;
+            
         }
 
     }

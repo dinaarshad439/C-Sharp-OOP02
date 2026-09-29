@@ -106,10 +106,10 @@ namespace C_OOP02.Classes
         {
             Console.WriteLine($"Tracking Code: {TrackingCode}");
             Console.WriteLine($"Description: {Description}");
-            Console.WriteLine($"Weight: {Weight}");
-            Console.WriteLine($"Delivery Fee: {DeliveryFee}");
+            Console.WriteLine($"Weight: {Weight} KG");
+            Console.WriteLine($"Delivery Fee: {DeliveryFee} EGP");
             Console.WriteLine($"Destination: {Destination.GetFullAddress()}");
-            Console.WriteLine($"Estimated Cost: {EstimatedCost}");
+            Console.WriteLine($"Estimated Cost: {EstimatedCost} EGP");
 
         }
 

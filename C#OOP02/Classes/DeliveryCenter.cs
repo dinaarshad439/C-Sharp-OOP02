@@ -120,7 +120,9 @@ namespace C_OOP02.Classes
             {
                 if (shipments[i] != null)
                 {
+
                     shipments[i].PrintShipment();
+                    Console.WriteLine("--------------------------------------");
                 }
             }
         }
