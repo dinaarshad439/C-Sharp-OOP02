@@ -2,19 +2,26 @@
 
 namespace C_OOP02.Classes
 {
+    /// <summary>
+    /// Represents a delivery center that stores and manages shipments.
+    /// </summary>
     internal class DeliveryCenter
     {
         #region fields
         private Shipment?[] shipments;
         #endregion
 
-        
+        #region Property
+        public string CenterName {  get; set; }
+
+        #endregion
+
 
         #region Constructor
-        public DeliveryCenter()
+        public DeliveryCenter(string _centerName)
         {
             shipments = new Shipment[20];
-           
+            CenterName = _centerName;
         }
         #endregion 
 
@@ -81,7 +88,42 @@ namespace C_OOP02.Classes
             return false;
         }
 
-        
+        /// <summary>
+        /// Removes a shipment from the delivery center using its tracking code.
+        /// </summary>
+        /// <param name="trackingCode">The tracking code of the shipment to remove.</param>
+        /// <returns>
+        /// true if the shipment was found and removed; 
+        /// otherwise, false.
+        /// </returns>
+
+        public bool RemoveShipment(string trackingCode)
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i] != null && shipments[i].TrackingCode == trackingCode)
+                {
+                    shipments[i] = null;
+                    return true;
+                }
+            }
+
+            return false;
+        }
+
+        /// <summary>
+        /// Prints all stored shipments in the delivery center.
+        /// </summary>
+        public void PrintAllShipments()
+        {
+            for (int i = 0; i < shipments.Length; i++)
+            {
+                if (shipments[i] != null)
+                {
+                    shipments[i].PrintShipment();
+                }
+            }
+        }
 
 
         #endregion
